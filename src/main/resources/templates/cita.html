@@ -1,0 +1,263 @@
+<!DOCTYPE html >
+<html xmlns:th="http://www.thymeleaf.org">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>listado de citas</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+            crossorigin="anonymous" />
+        <link rel="stylesheet" href="theme.css" type="text/css"/>
+        <link rel="icon" type="image/x-icon" href="https://cdn-icons-png.flaticon.com/512/1006/1006771.png" />
+        <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
+        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+            <div class="container px-4 px-lg-5">
+                <a class="navbar-brand align-items-left" href="#page-top">Divine Salon by Shirley Santacruz</a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="btn btn-secondary" href="#about" >Acerca de nosotros</a></li>
+                        <li class="nav-item"><a class="btn btn-secondary" href="#projects">Servicios</a></li>
+                        <li class="nav-item"><a th:href="@{/cita/nuevo}" class="btn btn-secondary">Agenda tu cita</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Masthead-->
+        <header class="masthead">
+
+            <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
+                <div class="d-flex justify-content-center">
+                    <div class="text-center">
+                        <h1 class="mx-auto my-0 text-uppercase">DIVINE SALON</h1>
+                        <h2 class="text-white-50 mx-auto mt-3 mb-5">El arte de la belleza</h2>
+                        <a class="btn btn-primary" href="#table">Ver tus citas agendadas</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- About-->
+        <section class="about-section text-center" id="about">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-lg-8">
+                        <h2 class="text-white mb-4"> Sobre nuestro salón de belleza</h2>
+                        <p class="text-white-50">
+                            Somos un equipo de profesionales que tiene por prioridad el bienestar de nuestro cliente. 
+                            <a href="https://startbootstrap.com/theme/grayscale/"></a>
+                            Ofrecemos un amplio portafolio de servicios, dirigido a hombres y mujeres que quieran mantener y/o renovar su estilo.
+                        </p>
+                    </div>
+                </div>
+                <img class="img-fluid" src="https://i.ibb.co/G3dGB3B/Photo-1660864391061.png" width="600" height="600" alt="..." />
+                <hr>
+            </div>
+        </section>
+        <!-- Projects-->
+        <section class="projects-section bg-light" id="projects">
+            <div class="container px-4 px-lg-5">
+                <!-- Featured Project Row-->
+                <div class="row gx-0 mb-4 mb-lg-5 align-items-center">
+                    <div class="col-xl-8 col-lg-7"><img class="img-fluid mb-3 mb-lg-0" src="https://snworksceo.imgix.net/bsd/13d285a2-c32f-41b0-b734-7b1f2a76dac5.sized-1000x1000.jpg" alt="..." /></div>
+                    <div class="col-xl-4 col-lg-5">
+                        <div class="featured-text text-center text-lg-left">
+                            <h3>ALGUNOS DE NUESTROS SERVICIOS</h3>
+                            <p class="text-black-50 mb-0"></p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project One Row-->
+                <div class="row gx-0 mb-5 mb-lg-0 justify-content-center">
+                    <div class="col-lg-6"><img class="img-fluid" src="https://estaticos-cdn.prensaiberica.es/clip/71b54b43-b313-4fb8-a03e-537446920f80_16-9-discover-aspect-ratio_default_0.jpg" alt="..." /></div>
+                    <div class="col-lg-6">
+                        <div class="bg-black text-center h-100 project">
+                            <div class="d-flex h-100">
+                                <div class="project-text w-100 my-auto text-center text-lg-left">
+                                    <h4 class="text-white">CORTE DE CABELLO</h4>
+                                    <p class="mb-0 text-white-50">Tradicional y moderno</p>
+                                    <hr class="d-none d-lg-block mb-0 ms-0" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Two Row-->
+                <div class="row gx-0 justify-content-center">
+                    <div class="col-lg-6"><img class="img-fluid" src="https://www.comunicare.es/wp-content/uploads/2021/01/Publicidad-para-barberia.jpg" alt="..." /></div>
+                    <div class="col-lg-6 order-lg-first">
+                        <div class="bg-black text-center h-100 project">
+                            <div class="d-flex h-100">
+                                <div class="project-text w-100 my-auto text-center text-lg-right">
+                                    <h4 class="text-white">BARBERIA</h4>
+                                    <p class="mb-0 text-white-50">Barbershop para caballeros</p>
+                                    <hr class="d-none d-lg-block mb-0 me-0" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project Thre Row-->
+                <div class="row gx-0 mb-5 mb-lg-0 justify-content-center">
+                    <div class="col-lg-6"><img class="img-fluid" src="https://hcsalonspa.com/wp-content/uploads/2020/01/LACIADO.jpg" alt="..." /></div>
+                    <div class="col-lg-6">
+                        <div class="bg-black text-center h-100 project">
+                            <div class="d-flex h-100">
+                                <div class="project-text w-100 my-auto text-center text-lg-left">
+                                    <h4 class="text-white">CUIDADO CAPILAR</h4>
+                                    <p class="mb-0 text-white-50">Keratina, repolarización, tintes, iluminanciones, entre otros</p>
+                                    <hr class="d-none d-lg-block mb-0 ms-0" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project Four Row-->
+                <div class="row gx-0 justify-content-center">
+                    <div class="col-lg-6"><img class="img-fluid" src="https://www.csacademy.co.uk/wp-content/uploads/2020/11/cs-hair-beauty-academy-wrexham-nail-technology-course.jpg" alt="..." /></div>
+                    <div class="col-lg-6 order-lg-first">
+                        <div class="bg-black text-center h-100 project">
+                            <div class="d-flex h-100">
+                                <div class="project-text w-100 my-auto text-center text-lg-right">
+                                    <h4 class="text-white">NAILS SPA</h4>
+                                    <p class="mb-0 text-white-50">Manicure y pedicure</p>
+                                    <hr class="d-none d-lg-block mb-0 me-0" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project Five Row-->
+                <div class="row gx-0 mb-5 mb-lg-0 justify-content-center">
+                    <div class="col-lg-6"><img class="img-fluid" src="https://www.bettinafrumboli.com/wp-content/uploads/2019/12/maquillaje-profesional-como-profesion-01.jpg" alt="..." /></div>
+                    <div class="col-lg-6">
+                        <div class="bg-black text-center h-100 project">
+                            <div class="d-flex h-100">
+                                <div class="project-text w-100 my-auto text-center text-lg-left">
+                                    <h4 class="text-white">EVENTOS</h4>
+                                    <p class="mb-0 text-white-50">Peinado y maquillaje para Novias y Quiceañeras</p>
+                                    <hr class="d-none d-lg-block mb-0 ms-0" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project Six Row-->
+                <div class="row gx-0 justify-content-center">
+                    <div class="col-lg-6"><img class="img-fluid" src="https://www.potenciatushabilidades.com/wp-content/uploads/2020/10/11002.jpg" alt="..." /></div>
+                    <div class="col-lg-6 order-lg-first">
+                        <div class="bg-black text-center h-100 project">
+                            <div class="d-flex h-100">
+                                <div class="project-text w-100 my-auto text-center text-lg-right">
+                                    <h4 class="text-white">CEJAS, PESTAÑAS y DEPILACIÓN</h4>
+                                    <p class="mb-0 text-white-50">Lifting y ondulado de pestañas. Depilación con cera e hilo facial y corporal<p>
+                                    <hr class="d-none d-lg-block mb-0 me-0" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Signup-->
+        <!--<div class="container1">
+            <div class="row">
+                <div class="col-lg-3">
+                    <a th:href="@{/cita/nuevo}" class="btn btn-secondary">Agregar Cita</a>
+                </div>
+            </div>
+        </div>-->
+        <section class="container2">
+        <div class="container2">
+            <div class="row">
+                <h1 class="row gx-4 gx-lg-5 justify-content-center">Tus Citas Agendadas</h1>
+            </div>
+            <table class="table table-striped table-bordered" id="table">
+                <thead class="table-dark">
+                <th>Nombre</th>
+                <th>Apéllido</th>
+                <th>Teléfono</th>
+                <th>Email</th>
+                <th>Servicio</th>
+                <th>Fecha</th>
+                <th>Hora</th>
+                <th>Acciones</th>
+                </thead>
+                <tbody>
+                    <tr class="table-active" th:each="cita :${cita}">
+                        <td th:text="${cita.nombre}"></td>
+                        <td th:text="${cita.apellido}"></td>
+                        <td th:text="${cita.telefono}"></td>
+                        <td th:text="${cita.email}"></td>
+                        <td th:text="${cita.servicio}"></td>
+                        <td th:text="${cita.fecha}"></td>
+                        <td th:text="${cita.hora}"></td>
+                        <td>
+                            <a th:href="@{/cita/editar/{id}(id=${cita.id})}" class="btn btn-info" >Editar</a>
+                            <a th:href="@{/cita/{id}(id=${cita.id})}" class="btn btn-danger" >Eliminar</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        </section>
+        <!-- Contact-->
+        <section class="contact-section bg-black">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5">
+                    <div class="col-md-4 mb-3 mb-md-0">
+                        <div class="card py-4 h-100">
+                            <div class="card-body text-center">
+                                <i class="fas fa-map-marked-alt text-primary mb-2"></i>
+                                <h4 class="text-uppercase m-0">Dirección</h4>
+                                <hr class="my-4 mx-auto" />
+                                <div class="small text-black-50">Calle 27 a 72 # 79 - 87 / Chapinero central</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3 mb-md-0">
+                        <div class="card py-4 h-100">
+                            <div class="card-body text-center">
+                                <i class="fas fa-envelope text-primary mb-2"></i>
+                                <h4 class="text-uppercase m-0">Email</h4>
+                                <hr class="my-4 mx-auto" />
+                                <div class="small text-black-50"><a href="#!">contactenos@divinesalon.com</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3 mb-md-0">
+                        <div class="card py-4 h-100">
+                            <div class="card-body text-center">
+                                <i class="fas fa-mobile-alt text-primary mb-2"></i>
+                                <h4 class="text-uppercase m-0">Teléfono</h4>
+                                <hr class="my-4 mx-auto" />
+                                <div class="small text-black-50">+57 (311) 456-1234</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="social d-flex justify-content-center">
+                    <a class="mx-2" href="#!"><i class="fab fa-twitter"></i></a>
+                    <a class="mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
+                </div>
+            </div>
+        </section>
+        <!-- Footer-->
+        <footer class="footer bg-black small text-center text-white-50"><div class="container px-4 px-lg-5">Copyright &copy; Divine Salon by Shirley Santacruz 2022</div></footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        
+    </body>
+</html>

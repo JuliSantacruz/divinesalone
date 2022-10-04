@@ -1,0 +1,83 @@
+<!DOCTYPE html >
+<html xmlns:th="http://www.thymeleaf.org">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Agendar Cita</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+            crossorigin="anonymous" />
+        <link rel="stylesheet" href="/style.css" type="text/css"/>
+        
+    </head>
+    <body id="body">
+        <div class="container" id="formulario">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-6 container justify-content-center card">
+                    <h1 class="text-center">Agendar Cita</h1>
+                    <div class="card-body">
+                        <form th:action="@{/cita}" th:object="${cita}" method="POST">
+                            <div class ="form-group">
+                                <label>Nombre</label>
+                                <input type="text" name="nombre" th:field="*{nombre}" class="form-control" placeholder="Nombre">
+                            </div>
+                            <br>
+                            <div class ="form-group">
+                                <label>Apellido</label>
+                                <input type="text" name="nombre" th:field="*{apellido}" class="form-control" placeholder="Apellido">
+                            </div>
+                            <br>
+                            <div class ="form-group">
+                                <label>Teléfono</label>
+                                <input type="text" name="nombre" th:field="*{telefono}" class="form-control" placeholder="Telefono">
+                            </div>
+                            <br>
+                            <div class ="form-group">
+                                <label>Email</label>
+                                <input type="email" name="nombre" th:field="*{email}" class="form-control" placeholder="Email">
+                            </div>
+                            <br>
+                            <div class ="form-group">
+                                <label>Servicios</label>
+                                <br>
+                                <br>
+                                <label>CORTE DE CABELLO (Tradicional y Moderno)</label>
+                                <br>
+                                <label>BARBERIA (Barbershop para caballeros)</label> 
+                                <br>
+                                <label>CUIDADO CAPILAR (Keratina, repolarización, tintes, iluminanciones, entre otros)</label> 
+                                <br>
+                                <label>NAILS SPA (Manicure y pedicure)</label> 
+                                <br>
+                                <label>EVENTOS (Peinado y maquillaje para Novias y Quiceañeras)</label>
+                                <br>
+                                <label>CEJAS Y PESTAÑAS (Lifting y ondulado de pestañas. Depilación con cera e hilo facial y corporal)</label>
+                                <br>
+                                <label>DEPILACIÓN (Depilación con cera e hilo facial y corporal)</label>
+                                <br>
+                                <br>
+                                <input type="text" name="nombre" th:field="*{servicio}" class="form-control" placeholder="Digite su servicio">
+                            </div>
+                            <br>
+                            <div class ="form-group">
+                                <label>Fecha</label>
+                                <input type="date" name="nombre" th:field="*{fecha}" class="form-control" placeholder="Fecha">
+                            </div>
+                            <br>
+                            <div class ="form-group">
+                                <label>Hora</label>
+                                <input type="time" name="nombre" th:field="*{hora}" class="form-control" placeholder="Hora">
+                            </div>
+                            <br>
+                            <div class="box-footer">
+                                <button class="btn btn-success">Guardar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html >
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Editar Cita</title>
+    <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+            crossorigin="anonymous" />
+    <link rel="stylesheet" href="theme.css" type="text/css"/>
+</head>
+<body>
+
+	<div class="container">
+	<div class="row">
+		<div class="col-lg-6 col-md-6 col-sm-6 container justify-content-center card">
+		<h1 class="text-center">Editar Cita</h1>
+		<div class="card-body">
+		<form th:action="@{/cita/{id}(id=${cita.id})}" th:object="${cita}" method="POST">
+			<div class ="form-group">
+				<label>Nombre</label>
+				<input type="text" name="nombre" th:field="*{nombre}" class="form-control" placeholder="Nombre">
+			</div>
+			<br>
+			<div class ="form-group">
+				<label>Apellido</label>
+				<input type="text" name="nombre" th:field="*{apellido}" class="form-control" placeholder="Apellido">
+			</div>
+			<br>
+			<div class ="form-group">
+				<label>Teléfono</label>
+				<input type="text" name="nombre" th:field="*{telefono}" class="form-control" placeholder="Nombre">
+			</div>
+			<br>
+			<div class ="form-group">
+				<label>Email</label>
+				<input type="email" name="nombre" th:field="*{email}" class="form-control" placeholder="Nombre">
+			</div>
+			<br>
+			<div class ="form-group">
+				<label>Servicio</label>
+				<input type="text" name="nombre" th:field="*{servicio}" class="form-control" placeholder="Nombre">
+			</div>
+			<br>
+			<div class ="form-group">
+				<label>Fecha</label>
+				<input type="date" name="nombre" th:field="*{fecha}" class="form-control" placeholder="Nombre">
+			</div>
+			<br>
+			<div class ="form-group">
+				<label>Hora</label>
+				<input type="time" name="nombre" th:field="*{hora}" class="form-control" placeholder="Nombre">
+			</div>
+			<br>
+			<div class="box-footer">
+			<button class="btn btn-success">Guardar</button>
+			</div>
+		</form>
+		</div>
+		</div>
+	</div>
+	</div>
+</body>
+</html>
